@@ -8,7 +8,7 @@
 
 >GitHub Pages is a static site hosting service that takes HTML, CSS, and JavaScript files straight from a repository on GitHub, optionally runs the files through a build process, and publishes a website.
 
-## Languages
+## _Languages_
 
 
 <link rel="stylesheet" href="devicon.min.css">
@@ -56,5 +56,24 @@ taskInput.addEventListener("keyup", (e) => {
 		showTodo("all");
 	}
 });
+```
+
+``` javascript
+/* UPDATE-STATUS Function  */
+
+function updateStatus(selectedTask) {
+	/* getting paragraph tath contains task name */
+	let taskName = selectedTask.parentElement.lastElementChild;
+	if (selectedTask.checked) {
+		taskName.classList.add("checked");
+		/* Updating the status of selected task to completed */
+		todos[selectedTask.id].status = "completed";
+	} else {
+		taskName.classList.remove("checked");
+		/* Updating the status of selected task to pending */
+		todos[selectedTask.id].status = "pending";
+	}
+	localStorage.setItem("todo-list", JSON.stringify(todos));
+}
 ```
 
