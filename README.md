@@ -6,6 +6,8 @@
 ## _View Deployment_
 [Go to the site](https://fernandomoyano.github.io/todo-list-app/)
 
+>GitHub Pages is a static site hosting service that takes HTML, CSS, and JavaScript files straight from a repository on GitHub, optionally runs the files through a build process, and publishes a website.
+
 ## Languages
 
 
@@ -20,6 +22,39 @@
  
  </div>
  
- ## View Deployment
- 
- https://fernandomoyano.github.io/todo-list-app/
+## _Resources_
+[Box-Icons](https://boxicons.com/)
+>High Quality Web Icons
+Simple Open Source icons carefully crafted for designers & developers
+
+## _Some Functions_
+
+``` javascript
+/* INSTERT-TASK  */
+
+taskInput.addEventListener("keyup", (e) => {
+	let userTask = taskInput.value.trim();
+	if (e.key == "Enter" && userTask) {
+		/* if isEditTask isn't true */
+		if (!isEditedTask) {
+			/* if todos isn't exist, pass an empty array to todos */
+			if (!todos) {
+				todos = [];
+			}
+			let taskInfo = {
+				name: userTask,
+				status: "pending",
+			};
+			/* adding new task to todos */
+			todos.push(taskInfo);
+		} else {
+			isEditedTask = false;
+			todos = [editId].name = userTask;
+		}
+		taskInput.value = "";
+		localStorage.setItem("todo-list", JSON.stringify(todos));
+		showTodo("all");
+	}
+});
+```
+
