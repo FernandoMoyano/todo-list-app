@@ -1,7 +1,7 @@
 # _todo-list-app_
 
 ## _Description_
->Este proyecto representa una lista de tareas, compuesta por funciones como insertar una tarea, eliminar una tarea,editarla, borrar todas, para la persistencia de datos se usa localstorage
+>This project represents a list of tasks, composed of functions such as insert a task, delete a task, edit it, delete all, localstorage is used for data persistence.
 
 ## _View Deployment_
 [Go to the site](https://fernandomoyano.github.io/todo-list-app/)
