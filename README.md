@@ -1,4 +1,7 @@
-# todo-list-app
+# _todo-list-app_
+
+## _Description_
+>Este proyecto representa una lista de tareas, compuesta por funciones como insertar una tarea, eliminar una tarea,editarla, borrar todas, para la persistencia de datos se usa localstorage
 
 ## Languages
 
